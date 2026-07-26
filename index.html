@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Madras Coffee House </title>
+<title>Madras Coffee House</title>
 
 <style>
 
@@ -16,43 +16,37 @@
 
 body{
     font-family:Segoe UI,Arial,sans-serif;
-
-    /* Light crimson background */
-    background:#ffeaea;
-
-    /* Gold coffee-inspired pattern */
-    background-image:
-    radial-gradient(circle at 25px 25px, rgba(212,175,55,.22) 3px, transparent 4px),
-    radial-gradient(circle at 70px 70px, rgba(212,175,55,.22) 3px, transparent 4px),
-    radial-gradient(ellipse 12px 18px at 45px 45px, rgba(212,175,55,.16) 45%, transparent 46%),
-    radial-gradient(ellipse 12px 18px at 95px 95px, rgba(212,175,55,.16) 45%, transparent 46%);
-
-    background-size:130px 130px;
+    background:#FDE7E8 url("background.png");
+    background-repeat:repeat;
+    background-size:300px;
+    padding:15px;
 }
 
 .card{
     width:90%;
-    max-width:380px;
-    background:#ffffff;
-    margin:25px auto;
-    border-radius:22px;
-    padding:28px;
-    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    max-width:390px;
+    background:#fff;
+    margin:35px auto;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 18px 40px rgba(135,55,55,.15);
 }
 
 h1{
     text-align:center;
-    font-size:32px;
-    color:#4e342e;
-    margin-bottom:20px;
+    font-size:34px;
+    color:#4A2C2A;
+    margin-bottom:22px;
+    letter-spacing:.6px;
 }
 
 .product{
     text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    color:#2e7d32;
-    margin:18px 0 25px;
+    font-size:27px;
+    font-weight:700;
+    color:#6F4E37;
+    margin:20px 0 28px;
+    letter-spacing:.5px;
 }
 
 .row{
@@ -60,14 +54,14 @@ h1{
     justify-content:space-between;
     align-items:flex-start;
     gap:20px;
-    padding:18px 0;
-    border-bottom:1px solid #ececec;
+    padding:20px 0;
+    border-bottom:1px solid #F1E4E4;
 }
 
 .label{
     flex:1;
     font-size:18px;
-    font-weight:bold;
+    font-weight:600;
     color:#444;
 }
 
@@ -81,9 +75,9 @@ h1{
 }
 
 .price-value{
-    color:#2e7d32;
-    font-weight:bold;
-    font-size:20px;
+    color:#8B4513;
+    font-size:23px;
+    font-weight:700;
 }
 
 </style>
@@ -112,17 +106,20 @@ h1{
 
 <div class="row">
     <span class="label">Quantity</span>
-    <span class="value">100GMS</span>
+    <span class="value">100 g</span>
 </div>
-    <div class="row">
-    <span class="label">Validity</span>
+
+<div class="row">
+    <span class="label">Best Before</span>
     <span class="value" id="expiryDate"></span>
-    </div>
 </div>
-    
-    <script>
-const today = new Date();
-today.setDate(today.getDate() + 30);
+
+</div>
+
+<script>
+
+const expiryDate = new Date();
+expiryDate.setDate(expiryDate.getDate() + 30);
 
 const options = {
     day: "2-digit",
@@ -130,11 +127,10 @@ const options = {
     year: "numeric"
 };
 
-document.getElementById("expiryDate").innerHTML =
-    today.toLocaleDateString("en-IN", options);
-    </script>
+document.getElementById("expiryDate").textContent =
+expiryDate.toLocaleDateString("en-IN", options);
 
-
+</script>
 
 </body>
 </html>
