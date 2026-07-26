@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Karupatti House</title>
+<title>Madras Coffee House </title>
 
 <style>
 
@@ -94,33 +94,47 @@ h1{
 
 <div class="card">
 
-<h1>Karupatti House</h1>
+<h1>Madras Coffee House</h1>
 
 <div class="row">
     <span class="label">FSSAI No.</span>
-    <span class="value">12421026000977</span>
+    <span class="value">10026912000258</span>
 </div>
 
 <div class="product">
-    Tirunelveli Halwa
+    Dilpasand
 </div>
 
 <div class="row">
     <span class="label">Price</span>
-    <span class="value price-value">₹45</span>
+    <span class="value price-value">₹30</span>
 </div>
 
 <div class="row">
     <span class="label">Quantity</span>
-    <span class="value">100g</span>
+    <span class="value">100GMS</span>
 </div>
-
-<div class="row">
+    <div class="row">
     <span class="label">Validity</span>
-    <span class="value">30 Days from MFG Date</span>
+    <span class="value" id="expiryDate"></span>
+    </div>
 </div>
+    
+    <script>
+const today = new Date();
+today.setDate(today.getDate() + 30);
 
-</div>
+const options = {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+};
+
+document.getElementById("expiryDate").innerHTML =
+    today.toLocaleDateString("en-IN", options);
+    </script>
+
+
 
 </body>
 </html>
