@@ -111,14 +111,25 @@ h1{
 
 <div class="row">
     <span class="label">Best Before</span>
-    <span class="value" id="expiryDate"></span>
+    <span class="value" id="todayDate"></span>
 </div>
 
 </div>
     <script>
+window.onload = function () {
+
     const today = new Date();
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    document.getElementById('date').textContent = today.toLocaleDateString('en-IN', options);
+
+    const options = {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    };
+
+    document.getElementById("todayDate").textContent =
+        today.toLocaleDateString("en-IN", options);
+
+};
     </script>
 
 </body>
