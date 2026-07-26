@@ -115,22 +115,11 @@ h1{
 </div>
 
 </div>
-
-<script>
-
-const expiryDate = new Date();
-expiryDate.setDate(expiryDate.getDate() + 30);
-
-const options = {
-    day: "2-digit",
-    month: "short",
-    year: "numeric"
-};
-
-document.getElementById("expiryDate").textContent =
-expiryDate.toLocaleDateString("en-IN", options);
-
-</script>
+    <script>
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById('date').textContent = today.toLocaleDateString('en-IN', options);
+    </script>
 
 </body>
 </html>
