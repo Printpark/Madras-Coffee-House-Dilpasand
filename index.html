@@ -17,24 +17,24 @@
 body{
     font-family:Segoe UI,Arial,sans-serif;
 
-    /* Very light crimson background */
-    background:#fff8f8;
+    /* Light crimson background */
+    background:#ffeaea;
 
-    /* Premium gold coffee bean pattern */
+    /* Gold coffee-inspired pattern */
     background-image:
-    radial-gradient(circle at 25px 25px, rgba(212,175,55,.12) 2px, transparent 3px),
-    radial-gradient(circle at 65px 65px, rgba(212,175,55,.12) 2px, transparent 3px),
-    radial-gradient(ellipse 10px 16px at 40px 40px, rgba(212,175,55,.08) 45%, transparent 46%),
-    radial-gradient(ellipse 10px 16px at 80px 80px, rgba(212,175,55,.08) 45%, transparent 46%);
+    radial-gradient(circle at 25px 25px, rgba(212,175,55,.22) 3px, transparent 4px),
+    radial-gradient(circle at 70px 70px, rgba(212,175,55,.22) 3px, transparent 4px),
+    radial-gradient(ellipse 12px 18px at 45px 45px, rgba(212,175,55,.16) 45%, transparent 46%),
+    radial-gradient(ellipse 12px 18px at 95px 95px, rgba(212,175,55,.16) 45%, transparent 46%);
 
-    background-size:120px 120px;
+    background-size:130px 130px;
 }
 
 .card{
     width:90%;
     max-width:380px;
     background:#ffffff;
-    margin:40px auto;
+    margin:25px auto;
     border-radius:22px;
     padding:28px;
     box-shadow:0 10px 25px rgba(0,0,0,.10);
@@ -65,17 +65,17 @@ h1{
 }
 
 .label{
+    flex:1;
     font-size:18px;
     font-weight:bold;
     color:#444;
-    flex:1;
 }
 
 .value{
-    font-size:18px;
-    color:#333;
     flex:1;
     text-align:right;
+    font-size:18px;
+    color:#333;
     line-height:1.5;
     word-break:break-word;
 }
@@ -84,13 +84,6 @@ h1{
     color:#2e7d32;
     font-weight:bold;
     font-size:20px;
-}
-
-.footer{
-    text-align:center;
-    margin-top:20px;
-    color:#999;
-    font-size:14px;
 }
 
 </style>
@@ -125,17 +118,6 @@ h1{
 <div class="row">
     <span class="label">Validity</span>
     <span class="value">30 Days from MFG Date</span>
-</div>
-
-<div class="row">
-    <span class="label">Ingredients</span>
-    <span class="value">
-        Wheat, Ghee, Cashew, Sugar &amp; Refined Oil
-    </span>
-</div>
-
-<div class="footer">
-    Crafted with ❤️ by Karupatti House
 </div>
 
 </div>
